@@ -11,7 +11,7 @@ st.set_page_config(page_title="ShopAI", page_icon="🛍️")
 st.title("🛍️ ShopAI")
 st.caption("Atendimento inteligente da sua loja online")
 
-api_key = os.getenv("GEMINI_API_KEY")
+api_key = os.getenv("GEMINI_API_KEY") or st.secrets.get("GEMINI_API_KEY")
 
 if not api_key:
     st.error("Configure GEMINI_API_KEY no arquivo .env.")
