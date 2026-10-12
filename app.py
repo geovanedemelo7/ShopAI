@@ -8,7 +8,8 @@ from google.genai import types
 load_dotenv()
 
 st.set_page_config(page_title="MAYÃ VIADO", page_icon="LOGO.png")
-st.title("LOGO.png VIADO VOTA NO LULA")
+st.image("LOGO.png", width=120)
+st.title("VIADO VOTA NO LULA")
 st.caption("Atendimento inteligente da sua loja online")
 
 api_key = os.getenv("GEMINI_API_KEY") or st.secrets.get("GEMINI_API_KEY")
